@@ -1,17 +1,17 @@
-# Toledo's Trial Notes
-A brief search of the area surrounding this barrier reveals another of Toledo Van Possum's journal entries.
+# Notes du procès de Toledo
+Une brève recherche dans la zone entourant cette barrière révèle une autre entrée du journal de Toledo Van Possum.
 
 <blockquote>
-August 21st, 2016
+21 août 2016
 
 <hr/>
 
 <p>
-Our search through the Initiation Ritual Chamber continues, though I'm beginning to doubt if the final clue even exists. Thankfully, we have finally encountered another Trial - the Trial of Branching Paths. Using what I learned about Booleans and comparison logic, I must now learn how to branch my code in multiple directions to support many different scenarios.
+Notre recherche dans la Chambre du Rituel d'Initiation continue, bien que je commence à douter que l'indice final existe. Heureusement, nous avons finalement rencontré une autre épreuve - l'épreuve des chemins de branchement. En utilisant ce que j'ai appris sur les booléens et la logique de comparaison, je dois maintenant apprendre à brancher mon code dans de multiples directions pour prendre en charge de nombreux scénarios différents.
 </p>
 
 <p>
-If I ever make it out of this chamber, I am asking the TwilioQuest program to double my usual fee.
+Si je parviens à sortir de cette chambre, je demande au programme TwilioQuest de doubler mes honoraires habituels.
 </p>
 
 <p>
@@ -19,38 +19,38 @@ If I ever make it out of this chamber, I am asking the TwilioQuest program to do
 </p>
 </blockquote>
 
-## Hints and Tips
+## Trucs et astuces
 
-Throughout the journal entry, you find a few helpful passages.
+Tout au long de l'entrée du journal, vous trouverez quelques passages utiles.
 
 <details>
-<summary>How do I write code that branches in multiple directions?</summary>
+<summary>Comment écrire un code qui se branche dans plusieurs directions ?</summary>
 
-We've already seen the `if` statement, which lets us execute a code block when a certain condition is true. To support more than one condition, we should also become comfortable with the `elif` and `else` statements.
+Nous avons déjà vu l'instruction `if` qui nous permet d'exécuter un bloc de code lorsqu'une certaine condition est vraie. Pour prendre en charge plus d'une condition, nous devons également nous familiariser avec les instructions `elif` et `else`.
 
 ```python
 dinner_name = "kale"
 
 if dinner_name == "tacos":
-    print("Tacos for dinner - right on!")
+    print("Des tacos pour le dîner - tout à fait !")
 elif dinner_name == "pizza":
-    print("Pizza - can't go wrong there!")
+    print("Pizza - on ne peut pas se tromper !")
 else:
-    print("Okay - better than being hungry amirite?")
+    print("Ok - c'est mieux que d'avoir faim ?")
 ```
 
-You can use [comparison logic](https://docs.python.org/3/library/stdtypes.html#comparisons) to determine whether or not a code block should be executed. Conditional statements like this one can have only one `if` and `else` block, but your code can include as many `elif` blocks as necessary.
+Vous pouvez utiliser la [logique de comparaison] (https://docs.python.org/3/library/stdtypes.html#comparisons) pour déterminer si un bloc de code doit être exécuté ou non. Les instructions conditionnelles comme celle-ci ne peuvent avoir qu'un seul bloc `if` et `else`, mais votre code peut inclure autant de blocs `elif` que nécessaire.
 
-An `elif` block works just like an if statement - these comparisons are all executed in order, and whenever the first one evaluates to `True`, none of the other conditions will be evaluated. Order is important for these!
+Un bloc `elif` fonctionne comme une instruction if - ces comparaisons sont toutes exécutées dans l'ordre, et si la première est évaluée à `Vrai`, aucune des autres conditions ne sera évaluée. L'ordre est important dans ce cas !
 
-An `else` statement declares a code block that will be executed if none of the other conditions are true.
+Une instruction `else` déclare un bloc de code qui sera exécuté si aucune des autres conditions n'est vraie.
 
 </details>
 
 <details>
-<summary>How do I convert input to my script (strings) into numbers?</summary>
+<summary>Comment convertir les entrées de mon script (chaînes de caractères) en nombres?</summary>.
 
-To complete this challenge, you will need to compare the values of the numbers passed in to your script as arguments. However, when you initially read them from `sys.argv`, those values will be __strings__ and not __numbers__. To do numeric comparisons on them, we will need to convert the arguments to __integers (whole numbers)__ or __floats (decimal numbers)__. The code below shows how to convert inputs to integers.
+Pour réaliser ce défi, vous devrez comparer les valeurs des nombres transmis à votre script en tant qu'arguments. Cependant, lorsque vous les lisez initialement dans `sys.argv`, ces valeurs seront des __chaînes__ et non des __nombres__. Pour effectuer des comparaisons numériques, nous devrons convertir les arguments en __entiers (nombres entiers)__ ou __floats (nombres décimaux)__. Le code ci-dessous montre comment convertir les entrées en nombres entiers.
 
 ```python
 first_num = int(sys.argv[1])
@@ -61,32 +61,32 @@ sum_to_use = first_num + second_num
 </details>
 
 <details>
-<summary>What do I need to do to complete this trial?</summary>
+<summary>Que dois-je faire pour terminer cet essai?</summary>
 
-Create a file called `branching.py` in your code folder located here: 
+Créez un fichier appelé `branching.py` dans votre dossier de code situé ici : 
 
 ```bash
 <%= env.TQ_PYTHON_CODE_PATH.value %>
 ```
 
-Create a program that __accepts two command line arguments__ - two numbers (whole/integer numbers) that you must add together. Depending on the __sum of those numbers__, your code should print different messages.
+Créez un programme qui __accepte deux arguments de ligne de commande__ - deux nombres entiers  que vous devez additionner. En fonction de la __somme de ces nombres__, votre code devrait afficher des messages différents.
 
-* If the sum of the numbers is __less than or equal to zero__, print the text: <div>`You have chosen the path of destitution.`</div>
-* If the sum of the numbers is __1 through 100 (including 100)__, print the text: <div> `You have chosen the path of plenty.`</div>
-* If the sum of the numbers is __greater than 100__, print the text: <div> `You have chosen the path of excess.`</div>
+* Si la somme des nombres est __inférieure ou égale à zéro__, affichez le texte : <div>`Vous avez choisi le chemin de l'indigence.`</div>
+* Si la somme des nombres est __1 à 100 (y compris 100)__, affichez le texte suivant : <div>`Vous avez choisi le chemin de l'abondance.`</div>
+* Si la somme des nombres est __plus grande que 100__, affichez le texte : <div> `Vous avez choisi le chemin de la démesure.`</div>.
 
-Example script execution:
+Exemple d'exécution de script:
 
 ```bash
 python3 branching.py 30 200
 ```
 
-Example output:
+Exemple de résultat :
 
 ```bash
-You have chosen the path of excess.
+Vous avez choisi la voie de l'excès.
 ```
 
-Once your script can handle all three conditions correctly, click the *HACK* button!
+Une fois que votre script peut traiter les trois conditions correctement, cliquez sur le bouton *HACK* !
 
 </details>
